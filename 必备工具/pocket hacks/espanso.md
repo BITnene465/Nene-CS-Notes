@@ -118,4 +118,5 @@ Espanso 的命令行工具用于管理其后台服务、配置和包。
 
 
 
-### how to make our own sni
+### how to make our own snippets
+

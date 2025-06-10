@@ -22,10 +22,6 @@ docker-compose down
 
 
 
-
-
-
-
 ## tips
 
 ### 修改 dify 部署的代理端口

@@ -25,8 +25,6 @@ gcc demo.c -o demo
 
 一个C/C++文件需要经过预处理(preprocessing),编译(compolation)，汇编(assembly)和链接(linking) 才可以变成可执行文件
 
-![image-20240820195810360](G:/softwares/typora/typora%20%E5%9B%BE%E7%89%87/c%E7%BC%96%E8%AF%91/image-20240820195810360.png)
-
 
 
 ### 基本规则
