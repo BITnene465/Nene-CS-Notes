@@ -14,12 +14,6 @@
 
 ## 基本命令
 
-
-
-<img src="G:/softwares/typora/typora%20%E5%9B%BE%E7%89%87/linux%E5%91%BD%E4%BB%A4/image-20240819224957142.png" alt="image-20240819224957142" style="zoom:150%;" />
-
-
-
 ### 文件与目录
 
 #### ls
@@ -34,12 +28,6 @@ ls -dl /bin   # 仅查看目录属性
 ls -R      # 递归显示子目录的文件
 ls directory # 查看指定目录下的文件信息
 ```
-
-   ![image-20240819230653449](G:/softwares/typora/typora%20%E5%9B%BE%E7%89%87/linux%E5%91%BD%E4%BB%A4/image-20240819230653449.png)    
-
-
-
-![image-20240819230740493](G:/softwares/typora/typora%20%E5%9B%BE%E7%89%87/linux%E5%91%BD%E4%BB%A4/image-20240819230740493.png)
 
 
 

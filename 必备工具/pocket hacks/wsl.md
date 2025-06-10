@@ -14,8 +14,6 @@
 
 `wsl --install <Distro_name>`     用于下载并安装对应分发包
 
-<img src="wsl.assets/image-20250114133811730.png" alt="image-20250114133811730" style="zoom:50%;" />
-
 
 
 ### MIcrosoft store

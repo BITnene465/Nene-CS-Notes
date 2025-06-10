@@ -154,6 +154,42 @@ git push origin <tag-name>:<remote-branch>
 
 
 
+## 关于代理
+
+### 设置https代理
+
+```bash
+# 使用全局端口代理
+git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy http://127.0.0.1:1080
+
+# 去除代理
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+```
+
+
+
+```bash
+# 单次clone使用代理
+git clone -c https.proxy="127.0.0.1:1081" https://github.com/jonny-xhl/FastReport.git
+```
+
+**注：clash的默认端口为7890**
+
+> 参考资料： [为 git clone github 设置 HTTP 和 SSH 代理 (niluan304.github.io)](https://niluan304.github.io/p/为-git-clone-github-设置-http-和-ssh-代理/)
+
+
+
+### 终端代理脚本（快速停启代理）
+
+
+
+
+
+
+
 ## 通过开发场景学习
 
 ### 一些零碎场景
