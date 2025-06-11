@@ -1,7 +1,3 @@
-# std::string
-
-
-
 ## 1. `std::string` 的基本操作
 
 ### 初始化

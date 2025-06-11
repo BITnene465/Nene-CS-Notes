@@ -156,7 +156,7 @@ git push origin <tag-name>:<remote-branch>
 
 ## 关于代理
 
-### 设置https代理
+### https代理
 
 ```bash
 # 使用全局端口代理
@@ -182,7 +182,58 @@ git clone -c https.proxy="127.0.0.1:1081" https://github.com/jonny-xhl/FastRepor
 
 
 
-### 终端代理脚本（快速停启代理）
+
+
+### 根据 domain 路由
+
+每次git命令单独设置代理是十分麻烦的。如果直接设置全局代理，也会带来不必要的麻烦。（例如设置了 7890 的全局代理后，会导致无法访问国内的git仓库）。**所以我们可以根据 domain 来规则判断启用哪一个代理端口。**
+
+**最便捷的方案**，直接在 `.gitconfig` 中添加相关域名的代理方式
+
+```bash
+# ~/.gitconfig
+
+# 为 https://github.com 设置 HTTP/HTTPS 代理
+git config --global http.https://github.com.proxy http://127.0.0.1:7890
+# 如果你的代理是 SOCKS5 类型，例如端口为 1080
+# git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+```
+
+如何管理？
+
+```bash
+# 查看配置
+git config --global --get http.https://github.com.proxy 
+# 停用配置
+git config --global --unset http.https://github.com.proxy  
+```
+
+
+
+**最推荐的方案**，使用 `IncludeIf` 实现更加灵活的配置。
+
+1. 添加 代理文件 （toml， ini格式），代理文件以代理提供的软件分类
+
+```ini
+# ~/.gitconfig-clash-proxy
+[http]
+    proxy = http://127.0.0.1:7890
+[https]
+    proxy = http://127.0.0.1:7890
+```
+
+2. 在 .gitconfig 中添加 includeif 规则
+
+```ini
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+path = ~/.gitconfig-proxy
+```
+
+
+
+### ssh 代理
+
+
 
 
 
